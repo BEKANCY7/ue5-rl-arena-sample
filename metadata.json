@@ -1,0 +1,42 @@
+{
+  "task_id": "ue5-arena-inventory-damage",
+  "title": "Fix ArenaSample inventory stacking and damage pipeline",
+  "platform": "Unreal Engine 5",
+  "engine_version": "5.4",
+  "language": "C++",
+  "blueprint": false,
+  "task_type": "bugfix",
+  "difficulty": "medium",
+  "estimated_solve_minutes": 35,
+  "tags": [
+    "unreal",
+    "ue5",
+    "cpp",
+    "inventory",
+    "combat",
+    "damage",
+    "unit-tests"
+  ],
+  "starter_path": "Source/ArenaSample/",
+  "solution_path": "solution/",
+  "verifier": {
+    "command": "./verify.sh",
+    "workdir": ".",
+    "success_exit_code": 0,
+    "notes": "Portable CMake harness compiles the same Private/*.cpp sources with ARENA_PORTABLE_BUILD stubs (no Unreal Editor required)."
+  },
+  "files_of_interest": [
+    "Source/ArenaSample/Private/Inventory/ArenaInventory.cpp",
+    "Source/ArenaSample/Private/Combat/ArenaDamage.cpp",
+    "Source/ArenaSample/Public/Inventory/ArenaInventory.h",
+    "Source/ArenaSample/Public/Combat/ArenaDamage.h"
+  ],
+  "do_not_modify": [
+    "Harness/tests/"
+  ],
+  "repo_status": "builds_via_portable_harness; full UE5 editor build optional",
+  "approx_loc": "~400 LOC gameplay C++ + harness",
+  "rights": "original-work",
+  "author": "Bereket Tegene Niguse",
+  "contact": "bereket.tria@gmail.com"
+}

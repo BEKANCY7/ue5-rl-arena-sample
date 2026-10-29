@@ -1,0 +1,10 @@
+Harness/build/
+**/Binaries/
+**/DerivedDataCache/
+**/Intermediate/
+**/Saved/
+**/.vscode/
+**/.idea/
+*.user
+*.VC.db
+.DS_Store
